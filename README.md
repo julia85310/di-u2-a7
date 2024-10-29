@@ -1,36 +1,18 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# DI UNIDAD 2, ACTIVIDAD 7
+## Ejercicio 1: completa la galería
+Cuando presionamos en Gallery.js «Siguiente» en la última escultura, el código falla. Arregla la lógica para evitar el bloqueo. Puedes hacer esto agregando lógica adicional al controlador de evento o deshabilitando el botón cuando la acción no es posible.
 
-## Getting Started
+Después de arreglar el error, agrega un botón «Anterior» que muestre la escultura anterior. No debería chocar con la primera escultura.
 
-First, run the development server:
+## Ejercicio 2: arreglar entradas de formulario atascadas
+Cuando escribimos en los campos del formulario de Form.js, no obtenemos nada. Es como si los valores estuvieran «atascados» con cadenas vacías. El valor de la primera <entrada> está configurado para coincidir siempre con la variable firstName, y el valor de la segunda <entrada> está configurado para coincidir siempre con la variable lastName. Esto es correcto. Ambas entradas tienen controladores de eventos onChange, que intentan actualizar las variables en función de la última entrada del usuario (e.target.value). Sin embargo, las variables no parecen «recordar» sus valores entre renderizaciones. Solucionemos esto usando variables de estado en su lugar.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Ejercicio 3: arregla un error
+En FeedbackForm.js hay un pequeño formulario que se supone que permite al usuario dejar algunos comentarios. Cuando se envía el comentario, se supone que debe mostrar un mensaje de agradecimiento. Sin embargo, falla con un mensaje de error que dice «Se generaron menos Hooks de los esperados». ¿Puedes detectar el error y corregirlo?
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Ejercicio 4: eliminar estado innecesario
+Cuando se hace clic en el botón de FeedbackForm2.js, este ejemplo debe solicitar el nombre del usuario y luego mostrar una alerta saludándolo. Intentaste usar el estado para mantener el nombre, pero por alguna razón siempre muestra «¡Hola!«.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+Para corregir este código, elimina la variable de estado innecesaria. 
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+¿Puede explicar por qué esta variable de estado era innecesaria?
