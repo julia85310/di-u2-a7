@@ -1,10 +1,10 @@
-import { useState } from 'react';
-
 export default function FeedbackForm() {
-  const [name, setName] = useState('');
+  /*No necesitas que se guarde el estado para 
+  otros renderizados, por ello la variable de estado
+  está eliminada*/
 
   function handleClick() {
-    setName(prompt('¿Cuál es tu nombre?'));
+    let name = prompt('¿Cuál es tu nombre?');
     alert(`Hola, ${name}!`);
   }
 
